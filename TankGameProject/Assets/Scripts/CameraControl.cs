@@ -8,8 +8,6 @@ public class CameraControl : MonoBehaviour {
 	public Camera FirstPerCam;
 	public Camera TopView;
 
-    private int currentCamIndex = 1;
-
 	void Start() {
 		MainCam.enabled = false;
 		ThirdPerCamCam.enabled = true;

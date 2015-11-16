@@ -11,7 +11,6 @@ public class CollisionSound : MonoBehaviour
 
     private AudioSource soundSource;
     private Rigidbody rigBody;
-    private float velToVol = 0.2f;
     private float velocityClipSplit = 2f;
 
     // Use this for initialization

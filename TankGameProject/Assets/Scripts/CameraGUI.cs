@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraGUI : MonoBehaviour {
+public class CameraGUI : MonoBehaviour
+{
 
     public Texture2D textureImage;
 
@@ -11,14 +12,12 @@ public class CameraGUI : MonoBehaviour {
     {
 
     }
-    
+
     // Update is called once per frame
     void Update()
     {
 
     }
-
-    
 
     void OnGUI()
     {

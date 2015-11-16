@@ -15,27 +15,25 @@ public class ThirdtPersonCamScript : MonoBehaviour {
 
 
 	}
-	
-	void LateUpdate() {
-		
-		var wantedAngle = target.eulerAngles.y;
-		var wantedHeight = target.position.y + height;
-		var myAngle = transform.eulerAngles.y;
-		var myHeight = transform.position.y;
-		
-		myAngle = Mathf.LerpAngle (myAngle, wantedAngle, rotationDamping * Time.deltaTime);
-		myHeight = Mathf.Lerp (myHeight, wantedHeight, heightDamping * Time.deltaTime);
-		
-		var currentRotation = Quaternion.Euler (0, myAngle, 0);
-		
-		transform.position = target.position;
-		transform.position -= currentRotation * Vector3.forward * distance;
-		
-		float yPos = transform.position.y;
-		yPos = myHeight;
-		
-		transform.LookAt (target);
-		
-		
-	}
+
+    void LateUpdate()
+    {
+
+        float wantedAngle = target.eulerAngles.y;
+        float wantedHeight = target.position.y + height;
+        float myAngle = transform.eulerAngles.y;
+        float myHeight = transform.position.y;
+
+        myAngle = Mathf.LerpAngle(myAngle, wantedAngle, rotationDamping * Time.deltaTime);
+        myHeight = Mathf.Lerp(myHeight, wantedHeight, heightDamping * Time.deltaTime);
+
+        Quaternion currentRotation = Quaternion.Euler(0, myAngle, 0);
+
+        transform.position = target.position;
+        transform.position -= currentRotation * Vector3.forward * distance;
+
+        transform.LookAt(target);
+
+
+    }
 }
